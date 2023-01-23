@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types';
-// import { nanoid } from 'nanoid';
 
 import ListItem from 'components/ListItem/ListItem';
 
@@ -15,20 +14,6 @@ function ContactList({ onDeleteContact, onVisibleContacts }) {
             contact={contact}
             key={contact.id}
           />
-          // <li key={nanoid()} className={css.listItem}>
-          //   <p className={css.text}>
-          //     {contact.name}
-          //     {': '}
-          //     {contact.number}
-          //   </p>
-          //   <button
-          //     type="button"
-          //     onClick={() => onDeleteContact(contact.id)}
-          //     className={css.btn}
-          //   >
-          //     Delete
-          //   </button>
-          // </li>
         );
       })}
     </ul>

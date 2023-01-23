@@ -1,4 +1,6 @@
 import { nanoid } from 'nanoid';
+import PropTypes from 'prop-types';
+
 import css from '../ListItem/listItem.module.css';
 
 function ListItem({ onDeleteContact, contact }) {
@@ -21,3 +23,12 @@ function ListItem({ onDeleteContact, contact }) {
 }
 
 export default ListItem;
+
+ListItem.propTypes = {
+  onDeleteContact: PropTypes.func.isRequired,
+  contact: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    number: PropTypes.string.isRequired,
+    id: PropTypes.string.isRequired,
+  }),
+};
